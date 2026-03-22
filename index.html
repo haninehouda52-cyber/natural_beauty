@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Natural Beauty</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Natural Beauty 🌿</h1>
+    <nav>
+        <a href="#accueil">Accueil</a>
+        <a href="#produits">Produits</a>
+        <a href="#apropos">À propos</a>
+        <a href="#contact">Contact</a>
+        <span id="panier-btn" onclick="togglePanier()">🛒 0</span>
+    </nav>
+</header>
+
+<section id="accueil" class="hero">
+    <h2>La beauté au naturel</h2>
+    <p>Produits naturels pour votre peau</p>
+</section>
+
+<section id="produits">
+    <h2>Nos Produits</h2>
+
+    <div class="produits">
+
+        <div class="card">
+            <img src="crème naturel/crème naturel.jpg">
+            <h3>crème naturel</h3>
+            <p>100 DH</p>
+            <button onclick="ajouter('Crème naturel',100)">Ajouter</button>
+        </div>
+
+        <div class="card">
+            <img src="huile essentiel.jpg">
+            <h3>Huile essentielle</h3>
+            <p>80 DH</p>
+            <button onclick="ajouter('huile essentiel',80)">Ajouter</button>
+        </div>
+
+        <div class="card">
+            <img src="savon bio.jpg">
+            <h3>Savon bio</h3>
+            <p>50 DH</p>
+            <button onclick="ajouter('savon bio',50)">Ajouter</button>
+        </div>
+
+    </div>
+</section>
+
+<section id="apropos">
+    <h2>À propos</h2>
+    <p>Natural Beauty propose des produits cosmétiques naturels et écologiques.</p>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <form onsubmit="envoyer(event)">
+        <input type="text" placeholder="Nom" required>
+        <input type="email" placeholder="Email" required>
+        <textarea placeholder="Message" required></textarea>
+        <button type="submit">Envoyer</button>
+    </form>
+</section>
+
+<!-- PANIER -->
+<div id="panier">
+    <h2>Votre panier</h2>
+    <ul id="liste"></ul>
+    <p>Total : <span id="total">0</span> DH</p>
+    <button onclick="vider()">Vider</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
